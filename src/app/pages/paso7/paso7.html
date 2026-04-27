@@ -30,7 +30,7 @@
   
         <div class="tip">
           <div class="tip-icon">🌐</div>
-          <p>Para despliegue en GitHub Pages usa el paquete <code>angular-cli-ghpages</code> con un solo comando: <code>ng deploy</code>.</p>
+          <p>Para el despliegue en GitHub Pages usaremos <code>git</code> que puede instalarse desde <a class="enlaceweb" href="https://gitforwindows.org/">aquí</a>.</p>
         </div>
   
         <div class="code-block">
@@ -44,7 +44,10 @@
             <button class="copy-btn" #btn2 (click)="copyCode(btn2, pre2)">copiar</button>
           </div>
           <pre #pre2>npm install -g angular-cli-ghpages
-  ng deploy --base-href=/nombre-del-repo/</pre>
+            git init
+            git add .
+            git commit
+            git push origin main</pre>
         </div>
       </div>
     </div>
