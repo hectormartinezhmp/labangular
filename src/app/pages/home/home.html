@@ -1,0 +1,53 @@
+<header>
+    <div class="hero-glow"></div>
+    <div class="hero-grid"></div>
+  
+    <div class="badge">Guía 2026 · Angular v21</div>
+  
+    <h1>
+      <span class="word-desde">Crea tu primera web con</span>
+      <span class="word-angular">Angular</span>
+    </h1>
+  
+    <p class="hero-desc">
+      Aprende a instalar, configurar y construir con el framework  Angular desde cero.
+    </p>
+  
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">7</div>
+        <div class="stat-label">Pasos</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">-1</div>
+        <div class="stat-label">Hora</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">0</div>
+        <div class="stat-label">Dificultad</div>
+      </div>
+    </div>
+  
+    <a class="start-btn" routerLink="paso1">Empezar →</a>
+  
+    <div class="scroll-cta">
+      <div class="scroll-line"></div>
+      Descubre todo el contenido en un solo vistazo
+    </div>
+  </header>
+  
+  <section class="steps-index">
+    <div class="section-label">// índice</div>
+    <div class="steps-grid">
+      @for (step of steps; track step.num) {
+        <a class="step-card" [routerLink]="[step.url]">
+          <span class="card-num">{{ step.num | number:'2.0' }}</span>
+          <div class="card-info">
+            <strong>{{ step.title }}</strong>
+            <span>{{ step.sub }}</span>
+          </div>
+          <span class="card-tag" [class]="step.tagClass">{{ step.tag }}</span>
+        </a>
+      }
+    </div>
+  </section>

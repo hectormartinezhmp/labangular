@@ -1,0 +1,57 @@
+
+
+<div class="step-page">
+    <div class="step-inner">
+      <div class="step-header">
+        <div class="step-num">05</div>
+        <div class="step-title-group">
+          <h2>Entiende y edita el componente raíz</h2>
+          <span>Tu primer componente Angular</span>
+        </div>
+        <div class="step-tag tag-code">Código</div>
+      </div>
+  
+      <div class="step-body">
+        <p>Un <strong>componente</strong> es la unidad básica de Angular. Está formado por tres partes: la clase TypeScript, la plantilla HTML y los estilos CSS. Edita <code>src/app/app.ts</code>:</p>
+  
+        <div class="code-block">
+          <div class="code-bar">
+            <div class="code-bar-left">
+              <div class="code-dots">
+                <span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span>
+              </div>
+              <span class="code-file">src/app/app.ts</span>
+            </div>
+            <button class="copy-btn" #btn (click)="copyCode(btn, pre)">copiar</button>
+          </div>
+          <pre #pre>import {{ac}} Component {{cc}} from '@angular/core';
+  
+  @Component(&#123;
+    selector: 'app-root',
+    template: `
+      &lt;h1&gt;Hola, {{ac}}{{ac}} nombre &#125;&#125;!&lt;/h1&gt;
+      &lt;p&gt;Mi primera app Angular.&lt;/p&gt;
+    `,
+    styles: ['h1 {{ac}} color: #dd4dff; {{cc}}']
+  &#125;)
+  export class App {{ac}}
+    nombre = 'Mundo';
+  &#125;</pre>
+        </div>
+  
+        <p>Las dobles llaves <code>{{ac}}{{ac}} nombre {{cc}}{{cc}}</code> son <strong>interpolación</strong>, la forma de Angular de mostrar datos del componente en el HTML. Cada vez que la propiedad cambie en la clase, la vista se actualiza automáticamente.</p>
+  
+        <div class="tip">
+          <div class="tip-icon">💡</div>
+          <p>Es importante destacar que la versión actual de Angular ha cambiado la nomenclatura de los ficheros, por lo que si buscas documentación adicional lo encontrarás llamado como <strong>app.component.ts</strong> en lugar de <strong>app.ts</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="step-nav">
+      <a class="nav-btn" routerLink="/paso4">← Anterior</a>
+      <span class="step-progress">Paso 5 de 7</span>
+      <a class="nav-btn primary" routerLink="/paso6">Siguiente →</a>
+    </div>
+  </div>

@@ -1,0 +1,99 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(10, 10, 15, 0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  .nav-logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--accent);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    align-items: center;
+  }
+  
+  .nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-family: 'JetBrains Mono', monospace;
+    transition: color 0.2s;
+  }
+  
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--text);
+  }
+  
+  /* Steps dropdown */
+  .steps-menu {
+    position: relative;
+  }
+  
+  .steps-label {
+    color: var(--muted);
+    font-size: 0.85rem;
+    font-family: 'JetBrains Mono', monospace;
+    cursor: default;
+  }
+  
+  .steps-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 8px;
+    gap: 4px;
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+    min-width: 160px;
+  }
+  
+  .steps-menu:hover .steps-dropdown {
+    display: grid;
+  }
+  
+  .steps-dropdown a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    color: var(--muted) !important;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+  }
+  
+  .steps-dropdown a:hover,
+  .steps-dropdown a.active {
+    background: rgba(221, 77, 255, 0.1);
+    border-color: rgba(221, 77, 255, 0.3);
+    color: var(--accent) !important;
+  }
+  
+  @media (max-width: 640px) {
+    .steps-menu { display: none; }
+  }

@@ -1,0 +1,55 @@
+<div class="step-page">
+    <div class="step-inner">
+      <div class="step-header">
+        <div class="step-num">03</div>
+        <div class="step-title-group">
+          <h2>Crea un nuevo proyecto</h2>
+          <span>SPrimeros pasos con la herramienta</span>
+        </div>
+        <div class="step-tag tag-config">Config</div>
+      </div>
+  
+      <div class="step-body">
+        <p>Usa <strong>ng new</strong> para generar la estructura completa del proyecto. Angular te hará algunas preguntas sobre la configuración.</p>
+  
+        <div class="code-block">
+          <div class="code-bar">
+            <div class="code-bar-left">
+              <div class="code-dots">
+                <span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span>
+              </div>
+              <span class="code-file">terminal</span>
+            </div>
+            <button class="copy-btn" #btn (click)="copyCode(btn, pre)">copiar</button>
+          </div>
+          <pre #pre>ng new mi-primera-app
+  
+  # ¿Añadir Angular routing? → Yes
+  # ¿Qué formato de estilos? → CSS (o SCSS)</pre>
+        </div>
+  
+        <p>Esto genera la siguiente estructura de carpetas:</p>
+  
+        <div class="file-tree">
+          <span class="ft-dir">mi-primera-app/</span><br>
+          <span class="ft-indent">├── </span><span class="ft-dir">src/</span><br>
+          <span class="ft-indent">│   ├── </span><span class="ft-dir">app/</span><br>
+          <span class="ft-indent">│   │   ├── </span><span class="ft-file">app.ts</span><br>
+          <span class="ft-indent">│   │   ├── </span><span class="ft-file">app.html</span><br>
+          <span class="ft-indent">│   │   ├── </span><span class="ft-file">app.css</span><br>
+          <span class="ft-indent">│   │   └── </span><span class="ft-file">app.routes.ts</span><br>
+          <span class="ft-indent">│   ├── </span><span class="ft-file">index.html</span><br>
+          <span class="ft-indent">│   └── </span><span class="ft-file">main.ts</span><br>
+          <span class="ft-indent">├── </span><span class="ft-file">angular.json</span><br>
+          <span class="ft-indent">├── </span><span class="ft-file">package.json</span><br>
+          <span class="ft-indent">└── </span><span class="ft-file">tsconfig.json</span>
+        </div>
+      </div>
+    </div>
+  
+    <div class="step-nav">
+      <a class="nav-btn" routerLink="/paso2">← Anterior</a>
+      <span class="step-progress">Paso 3 de 7</span>
+      <a class="nav-btn primary" routerLink="/paso4">Siguiente →</a>
+    </div>
+  </div>

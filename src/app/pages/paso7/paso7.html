@@ -1,0 +1,57 @@
+<div class="step-page">
+    <div class="step-inner">
+      <div class="step-header">
+        <div class="step-num">07</div>
+        <div class="step-title-group">
+          <h2>Compila y despliega</h2>
+          <span>La web ya es tuya</span>
+        </div>
+        <div class="step-tag tag-config">Deploy</div>
+      </div>
+  
+      <div class="step-body">
+        <p>Cuando tu app esté lista, genera el <strong>build de producción</strong>. Angular optimizará, minificará y compilará el código de TypeScript a JavaScript estándar.</p>
+  
+        <div class="code-block">
+          <div class="code-bar">
+            <div class="code-bar-left">
+              <div class="code-dots">
+                <span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span>
+              </div>
+              <span class="code-file">terminal</span>
+            </div>
+            <button class="copy-btn" #btn1 (click)="copyCode(btn1, pre1)">copiar</button>
+          </div>
+          <pre #pre1>ng build
+  # Los archivos finales se generan en: dist/mi-primera-app/</pre>
+        </div>
+  
+        <p>Sube el contenido de la carpeta <code>dist/</code> a cualquier hosting estático: <strong>Vercel, Netlify, GitHub Pages o Firebase Hosting</strong>.</p>
+  
+        <div class="tip">
+          <div class="tip-icon">🌐</div>
+          <p>Para despliegue en GitHub Pages usa el paquete <code>angular-cli-ghpages</code> con un solo comando: <code>ng deploy</code>.</p>
+        </div>
+  
+        <div class="code-block">
+          <div class="code-bar">
+            <div class="code-bar-left">
+              <div class="code-dots">
+                <span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span>
+              </div>
+              <span class="code-file">terminal</span>
+            </div>
+            <button class="copy-btn" #btn2 (click)="copyCode(btn2, pre2)">copiar</button>
+          </div>
+          <pre #pre2>npm install -g angular-cli-ghpages
+  ng deploy --base-href=/nombre-del-repo/</pre>
+        </div>
+      </div>
+    </div>
+  
+    <div class="step-nav">
+      <a class="nav-btn" routerLink="/paso6">← Anterior</a>
+      <span class="step-progress">Paso 7 de 7</span>
+      <a class="nav-btn primary" routerLink="/checklist">Ver checklist ✓</a>
+    </div>
+  </div>

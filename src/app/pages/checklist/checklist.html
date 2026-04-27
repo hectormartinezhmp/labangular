@@ -1,0 +1,44 @@
+<div class="checklist-page">
+
+    <div class="checklist-header">
+      <div class="section-label">// progreso</div>
+      <h2>Checklist de progreso</h2>
+      <p class="sub">Marca cada paso que hayas completado.</p>
+    </div>
+  
+    <!-- Progress bar -->
+    <div class="progress-wrap">
+      <div class="progress-meta">
+        <span>{{ completed() }} de {{ total() }} completados</span>
+        <span class="pct">{{ progress }}%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" [style.width.%]="progress"></div>
+      </div>
+    </div>
+  
+    @if (allDone()) {
+      <div class="congrats">
+        🎉 ¡Enhorabuena! Has completado todos los pasos del tutorial.
+      </div>
+    }
+  
+    <!-- Items -->
+    <div class="checklist-items">
+      @for (item of items(); track $index) {
+        <div class="check-item" [class.checked]="item.done" (click)="toggle($index)">
+          <div class="checkbox">
+            @if (item.done) { <span>✓</span> }
+          </div>
+          <span class="check-label">{{ item.label }}</span>
+          <span class="check-code">{{ item.code }}</span>
+        </div>
+      }
+    </div>
+  
+    <div class="back-link">
+      <a class="nav-btn" routerLink="/">← Volver al inicio</a>
+      <a class="nav-btn" routerLink="/paso1">Repasar los pasos</a>
+    </div>
+  
+  </div>

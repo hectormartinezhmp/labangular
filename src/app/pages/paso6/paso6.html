@@ -1,0 +1,75 @@
+<div class="step-page">
+    <div class="step-inner">
+      <div class="step-header">
+        <div class="step-num">06</div>
+        <div class="step-title-group">
+          <h2>Genera un nuevo componente</h2>
+          <span>Arquitectura basada en componentes</span>
+        </div>
+        <div class="step-tag tag-code">Código</div>
+      </div>
+  
+      <div class="step-body">
+        <p>Angular CLI genera componentes automáticamente con todos los archivos necesarios. Usa el comando <strong>ng generate</strong>:</p>
+  
+        <div class="code-block">
+          <div class="code-bar">
+            <div class="code-bar-left">
+              <div class="code-dots">
+                <span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span>
+              </div>
+              <span class="code-file">terminal</span>
+            </div>
+            <button class="copy-btn" #btn1 (click)="copyCode(btn1, pre1)">copiar</button>
+          </div>
+          <pre #pre1>ng generate component header</pre>
+        </div>
+  
+        <p>Esto crea la carpeta <code>src/app/header/</code> con los 4 archivos del componente. Úsalo en tu app añadiéndolo al template del componente padre:</p>
+  
+        <div class="code-block">
+          <div class="code-bar">
+            <div class="code-bar-left">
+              <div class="code-dots">
+                <span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span>
+              </div>
+              <span class="code-file">app.html</span>
+            </div>
+            <button class="copy-btn" #btn2 (click)="copyCode(btn2, pre2)">copiar</button>
+          </div>
+          <pre #pre2>&lt;app-header&gt;&lt;/app-header&gt;
+  &lt;main&gt;
+    &lt;!-- contenido principal --&gt;
+  &lt;/main&gt;</pre>
+          </div>
+  
+        <div class="warning">
+          <div class="tip-icon">⚠️</div>
+          <p>En Angular 17+ con <strong>standalone components</strong>, necesitas importar el componente en el array <code>imports: []</code> del componente padre donde lo vayas a usar.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="code-block">
+      <div class="code-bar">
+        <div class="code-bar-left">
+          <div class="code-dots">
+            <span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span>
+          </div>
+          <span class="code-file">app.routes.ts</span>
+        </div>
+        <button class="copy-btn" #btn2 (click)="copyCode(btn2, pre2)">copiar</button>
+      </div>
+      <pre #pre2> export const routes: Routes = [
+        {{ac}}path: '', component: Header{{cc}},</pre>
+    </div>
+
+
+
+  
+    <div class="step-nav">
+      <a class="nav-btn" routerLink="/paso5">← Anterior</a>
+      <span class="step-progress">Paso 6 de 7</span>
+      <a class="nav-btn primary" routerLink="/paso7">Siguiente →</a>
+    </div>
+  </div>

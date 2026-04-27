@@ -1,0 +1,42 @@
+<div class="step-page">
+    <div class="step-inner">
+      <div class="step-header">
+        <div class="step-num">04</div>
+        <div class="step-title-group">
+          <h2>Ejecuta el servidor de desarrollo</h2>
+          <span>Hola Mundo del framework</span>
+        </div>
+        <div class="step-tag tag-setup">Dev</div>
+      </div>
+  
+      <div class="step-body">
+        <p>Navega dentro de la carpeta del proyecto y arranca el servidor local. Angular incluye <strong>live reload</strong> — lo que significa que los cambios en el código se verán reflejados en cuanto guardes el fichero.</p>
+  
+        <div class="code-block">
+          <div class="code-bar">
+            <div class="code-bar-left">
+              <div class="code-dots">
+                <span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span>
+              </div>
+              <span class="code-file">terminal</span>
+            </div>
+            <button class="copy-btn" #btn (click)="copyCode(btn, pre)">copiar</button>
+          </div>
+          <pre #pre>cd mi-primera-app
+  ng serve --open
+  # Abre automáticamente http://localhost:4200</pre>
+        </div>
+  
+        <div class="tip">
+          <div class="tip-icon">🚀</div>
+          <p>Si el puerto <strong>4200</strong> está ocupado, puedes cambiar el puerto por defecto usando: <code>ng serve --port 4300</code></p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="step-nav">
+      <a class="nav-btn" routerLink="/paso3">← Anterior</a>
+      <span class="step-progress">Paso 4 de 7</span>
+      <a class="nav-btn primary" routerLink="/paso5">Siguiente →</a>
+    </div>
+  </div>
